@@ -1,12 +1,14 @@
 .section {
     box-sizing: border-box;
-    /* display: flex;
-    align-items: flex-start; */
     padding: 50px 28px;
     margin: 0 auto;
     margin-bottom: 40px;
     background: white;
     border-radius: 10px;
+}
+
+.section.section-flex{
+    display: flex;
 }
 
 .section-alt {

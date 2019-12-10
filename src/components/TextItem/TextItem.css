@@ -56,6 +56,7 @@
 .text-item:nth-child(8) {
     order: 1;
     padding-left: 35px;
+    padding-bottom: 40px;
 }
 
 

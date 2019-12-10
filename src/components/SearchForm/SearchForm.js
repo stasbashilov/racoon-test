@@ -6,25 +6,12 @@ import './SearchForm.css';
 
 class SearchForm extends React.Component {
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    const output = document.createElement('div');
-    const data = [...event.target.elements].reduce((data, element) => {
-      if (element.name && element.value) {
-        data[element.name] = element.value;
-      }
-      return data;
-    }, {});
-    output.textContent = JSON.stringify(data);
-    // document.body.appendChild(output);
-  };
-
   render() {
     return (
       <div className="search-form">
-        <form action="/search" onSubmit={this.handleSubmit}>
+        <form>
           <Icon />
-          <input className="search-form-input" type="text" name="q" />
+          <input className="search-form-input" type="text" />
           <Button innerText="Find" />
         </form>
       </div>
@@ -32,4 +19,4 @@ class SearchForm extends React.Component {
   }
 }
 
-export default SearchForm
+export default SearchForm;

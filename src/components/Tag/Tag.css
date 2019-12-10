@@ -9,6 +9,7 @@
     text-transform: uppercase;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .tag-item .svg-icon {
@@ -21,10 +22,21 @@
 }
 
 @media (max-width: 800px) {
+    .tag-item {
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .tag-item.active {
         background: transparent;
         color: rgb(110, 110, 110);
-        padding-left: 10px;  
+        padding-left: 10px;
+        justify-content: space-between;
+        /* height: 49px; */
+    }
+
+    .tag-item span {
+        line-height: 24px;
     }
 
     .tag-item.active .svg-icon {

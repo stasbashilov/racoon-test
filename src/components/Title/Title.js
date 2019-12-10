@@ -4,7 +4,7 @@ import './Title.css';
 
 const Title = (props) => (
     <h2 className='title'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        {props.text}
     </h2>
 )
 
