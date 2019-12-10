@@ -1,0 +1,11 @@
+.text-list {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(155, 155, 155);
+}
+
+@media (max-width: 768px) {
+    .text-list {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,65 @@
+.tags-list {
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tags-list.active {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    background: rgb(241, 241, 241);
+    max-width: 168px;
+    align-items: flex-end;
+    margin: auto;
+}
+
+.tags-list.active .tag-item {
+    margin-right: 0;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .tags-list {
+        display: none;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+    background: rgb(241, 241, 241);
+    align-items: center;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
+.hamburger .line{
+    width: 18px;
+    height: 3px;
+    background-color: rgb(117, 117, 117);
+    display: block;
+    margin: 3px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
