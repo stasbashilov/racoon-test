@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "raccoon-gang",
+    "raccoon-gang": "raccoon-gang"
+  }
+}
