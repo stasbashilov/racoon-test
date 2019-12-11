@@ -11,6 +11,10 @@
     display: flex;
 }
 
+.section.section-alt {
+    padding-bottom: 0;
+}
+
 .section-alt {
     padding-bottom: 0;
 }

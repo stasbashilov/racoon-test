@@ -4,7 +4,7 @@ import { images } from './data';
 import './Logo.css';
 
 const Logo = (props) => (
-    <div className='logo'>{images.find(img => img.type ).img()}</div>
+    <div className='logo'>{images.find(item => item.type === 'logo' ).img()}</div>
 )
 
-export default Logo
+export default Logo;

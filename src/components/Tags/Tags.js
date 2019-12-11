@@ -29,29 +29,30 @@ class Tags extends React.Component {
         });
 
     handleUncheck = () => this.setState({ activeId: null });
+
     handleOpenMenu = () => this.setState({ activeClass: !this.state.activeClass });
 
     render() {
-        const name = tagList.find(i => i.id === this.state.activeId).name;
+        const name = this.state.activeId ? tagList.find(item => item.id === this.state.activeId).name : '';
 
         return (
             <React.Fragment>
                 <Burger className={`hamburger ${this.state.activeClass ? 'hidden' : ' '}`} onClick={this.handleOpenMenu} name={name} />
                 <ul className={`tags-list ${this.state.activeClass ? 'mobile' : ' '}`}>
                     {tagList.map((item, index) => {
-                        return (
-                            <Tag
-                                key={index}
-                                name={item.name}
-                                className={this.state.activeId === item.id ? 'tag-item active' : 'tag-item'}
-                                onClick={() => {
-                                    this.state.activeId === item.id ? this.handleUncheck() : this.handleCheck(item.id)
-                                }}
-                            />
-                        )
-                    })}
+                    return (
+                        <Tag
+                            key={index}
+                            name={item.name}
+                            className={this.state.activeId === item.id ? 'tag-item active' : 'tag-item'}
+                            onClick={() => {
+                                this.state.activeId === item.id ? this.handleUncheck() : this.handleCheck(item.id)
+                            }}
+                        />
+                    )
+                })}
                 </ul>
-            </React.Fragment>
+            </React.Fragment >
         )
     }
 }
