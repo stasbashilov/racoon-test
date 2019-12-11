@@ -1,11 +1,31 @@
 .text-list {
     display: flex;
-    flex-wrap: wrap;
     color: rgb(155, 155, 155);
 }
 
-@media (max-width: 768px) {
+.text-list .text-list-container:first-child {
+    border-right: 2px solid rgb(140, 191, 85);
+    padding-right: 30px;
+}
+
+.text-list .text-list-container:last-child {
+    padding-left: 30px;
+}
+
+.text-list-container {
+    width: 45%;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 800px) {
     .text-list {
         flex-direction: column;
+    }
+
+    .text-list-container {
+        width: 100%;
+        padding: 0 !important;
+        padding-bottom: 40px !important;
+        border: none !important;
     }
 }

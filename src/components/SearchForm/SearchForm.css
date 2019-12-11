@@ -1,6 +1,10 @@
 .search-form {
     width: 100%;
 }
+
+.search-form + .search-form {
+    margin-top: 18px;
+}
  
 .search-form form {
     width: 100%;

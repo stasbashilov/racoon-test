@@ -16,6 +16,7 @@ const Layout = () => (
             <Logo />
             <Section>
                 <SearchForm />
+                <SearchForm />
             </Section>
             <Section flex={true}>
                 <Tags />
